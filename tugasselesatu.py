@@ -5,7 +5,7 @@ option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(options=option)
-driver.maximize_window()
+driver.minimize_window()
 
 
 urlList = ['https://tiket.com'
@@ -16,6 +16,7 @@ urlList = ['https://tiket.com'
 
 for url in urlList:
     driver.get(url)
+    # sleep(3)
     title = driver.title
     print(f'{url} - {title}')
 
