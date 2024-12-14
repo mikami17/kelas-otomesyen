@@ -7,7 +7,6 @@ option.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=option)
 driver.minimize_window()
 
-
 urlList = ['https://tiket.com'
         ,'https://tokopedia.com'
         ,'https://orangsiber.com'
