@@ -3,13 +3,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.firefox.options import Options
 import pytest 
 
 @pytest.fixture
 def browser():
-    option = Options()
-    driver = webdriver.Firefox(options=option)
+    option = webdriver.ChromeOptions()
+    option.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=option)
 
     driver.implicitly_wait(5)
     driver.maximize_window()
