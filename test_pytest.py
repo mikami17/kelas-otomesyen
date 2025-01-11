@@ -1,3 +1,10 @@
+'''
+Author: Daisy
+Tugas:
+Buat Automation test untuk per-login-an dari web berikut.
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+'''
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
